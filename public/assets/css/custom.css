@@ -1,0 +1,114 @@
+/* --- GENERAL: Forms --- */
+.form-group.required label:after {
+    content:" *";
+    color:red;
+}
+
+/* --- MAPS: Route Container --- */
+.leaflet-routing-container {
+    display: none;
+}
+
+/* --- DRIVERS: Tab Navbar --- */
+.card-drivers .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.card-drivers .nav-tabs {
+    flex-grow: 1;
+}
+
+.card-drivers .range-select .form-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+}
+
+.card-drivers .range-select .form-group label {
+    margin-right: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-bottom: 0;
+}
+
+.card-drivers .range-select .input-group {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+@media (max-width: 600px) {
+    .card-drivers .range-select .form-group {
+        flex-wrap: wrap;
+    }
+
+    .card-drivers .range-select .form-group label {
+        white-space: normal;
+        flex-basis: 100%;
+    }
+
+    .card-drivers .range-select .input-group {
+        flex-basis: 100%;
+    }
+}
+
+/* --- DRIVERS: Popover --- */
+.table-drivers .popover-button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    width: 100%;
+    float: left;
+    text-align: left;
+}
+
+.table-drivers .dtr-details li[data-dtr-index="5"] {
+    float: left;
+}
+
+table.table-drivers.dataTable.dtr-inline.collapsed tbody td.child ul.dtr-details span.dtr-data {
+    white-space: normal;
+}
+
+/* --- SELECT2: Custom --- */
+.select2-container--default .select2-selection--single {
+    height: 38px;
+    border: 1px solid #ced4da;
+}
+
+.form-control.is-invalid~.select2-container {
+    border: 1px solid red;
+    border-right: 0;
+}
+
+/* --- FullCalendar: Loading Spinner --- */
+.calendar-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 10;
+}
+
+.spinner {
+    border: 4px solid rgba(0,0,0,.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
